@@ -45,10 +45,10 @@ import javax.swing.JScrollBar;
 
 public class App {
 	
-	private Logger logger;
-	private List<User> userList = new ArrayList<>();
-	private User mainUser;
-	private Facade facade;
+	public Logger logger;
+	public List<User> userList = new ArrayList<>();
+	public User mainUser;
+	public Facade facade;
 	
 	private static final String USERPANEL = "USERPANEL";
 	private static final String EMPLOYEEPANEL = "EMPLOYEEPANEL";

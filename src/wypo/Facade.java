@@ -5,10 +5,10 @@ import java.util.List;
 
 public class Facade 
 {
-	private List<User> userList;
-	private List<Movie> movieList;
-	private List<Title> titleList;
-	private User mainUser;
+	public List<User> userList;
+	public List<Movie> movieList;
+	public List<Title> titleList;
+	public User mainUser;
 	
 	public Facade(List<User> userList)
 	{
