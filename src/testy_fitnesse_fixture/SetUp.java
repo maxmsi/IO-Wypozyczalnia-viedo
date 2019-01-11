@@ -11,21 +11,24 @@ import wypo.User;
 import wypo.Movie;
 import wypo.Status;
 import wypo.Form;
+import wypo.Title;
 import fit.Fixture;
 
 public class SetUp extends Fixture{
    static App app;
    static Facade fcd;
    static Status sts;
-    static Movie movie;
-    static User usr;
-    public SetUp(){
+   static Movie movie;
+   static User usr;
+   static Movie movieList;
+   static Title titleList;
+   static Form frm;
+   
+   public SetUp(){
        app=new App();
        fcd = new Facade(app.userList) ;
        movie = new Movie();
+       
       
-	
-	
-
 }
 }
