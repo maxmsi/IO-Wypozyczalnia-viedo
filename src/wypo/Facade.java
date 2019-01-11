@@ -19,10 +19,18 @@ public class Facade
 		titleList.add(new Title("Batman","C. Nolan",new Date(),"Warner Bros"));
 		titleList.add(new Title("Superman","B. Dolan",new Date(),"Warner Bros"));
 		titleList.add(new Title("IronMan","K. Foidge",new Date(),"MCU"));
+                titleList.add(new Title("Aquaman","J. Wan",new Date(),"Warner Bros"));
+                titleList.add(new Title("Shazam!","D. Lemke",new Date(),"DC Comics"));
+                titleList.add(new Title("Titanic","J. Cameron",new Date(),"20th Century Fox"));
+                
+                
 		
 		movieList.add(new Movie(titleList.get(0), Status.NOTRENTED, Form.VHS));
 		movieList.add(new Movie(titleList.get(1), Status.NOTRENTED, Form.DVD));
 		movieList.add(new Movie(titleList.get(2), Status.NOTRENTED, Form.VHS));
+                movieList.add(new Movie(titleList.get(3), Status.NOTRENTED, Form.DVD));
+		movieList.add(new Movie(titleList.get(4), Status.NOTRENTED, Form.DVD));
+		movieList.add(new Movie(titleList.get(5), Status.NOTRENTED, Form.DVD));
 		
 		
 	}
@@ -76,8 +84,8 @@ public class Facade
 	public boolean reserveMovie(User user, Movie movie)
 	{
 		Movie movieFound = findMovie(movie);
-		if(movieFound != null)
-		{
+		if(movieFound != null && movieFound.getStatus()!=Status.RESERVED)
+		{       
 			movieFound.setUserId(user.getuId());
 			changeMovieStatus(movieFound, Status.RESERVED);
 			return true;
